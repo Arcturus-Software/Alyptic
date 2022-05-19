@@ -1,0 +1,101 @@
+local NotifLib = {}
+
+function NotifLib:Notification(title,titledescription,text,duration,icon)
+    local Notif = Instance.new("ScreenGui")
+    local Notification = Instance.new("Frame")
+    local UIGradient = Instance.new("UIGradient")
+    local Icon = Instance.new("ImageLabel")
+    local Title = Instance.new("TextLabel")
+    local TitleDescription = Instance.new("TextLabel")
+    local Description = Instance.new("TextLabel")
+    local UICorner = Instance.new("UICorner")
+    local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+
+    Notif.Parent = game:GetService("CoreGui")
+    Notif.Name = "Notif"
+    Notif.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+    Notification.Name = "Notification"
+    Notification.Parent = Notif
+    Notification.BackgroundColor3 = Color3.fromRGB(9, 10, 12)
+    Notification.BorderColor3 = Color3.fromRGB(9, 10, 12)
+    Notification.BorderSizePixel = 0
+    Notification.Position = UDim2.new(0.843152225, 0, 0.901254177, 0)
+    Notification.Size = UDim2.new(0, 195, 0, 73)
+
+    UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(33, 33, 33)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(40, 40, 40))}
+    UIGradient.Parent = Notification
+
+    Icon.Name = "Icon"
+    Icon.Parent = Notification
+    Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Icon.BackgroundTransparency = 1.000
+    Icon.Position = UDim2.new(0.0354289524, 0, 0.0949355885, 0)
+    Icon.Size = UDim2.new(0, 24, 0, 24)
+    Icon.Image = icon or "rbxassetid://9657561830"
+    Icon.ScaleType = Enum.ScaleType.Fit
+
+    Title.Name = "Title"
+    Title.Parent = Notification
+    Title.AnchorPoint = Vector2.new(0.5, 0.5)
+    Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Title.BackgroundTransparency = 1.000
+    Title.BorderSizePixel = 0
+    Title.Position = UDim2.new(0.576161206, 0, 0.191861093, 0)
+    Title.Size = UDim2.new(0.766679108, 0, 0.193851367, 0)
+    Title.Font = Enum.Font.GothamBlack
+    Title.Text = title or "Arcturus Cloud"
+    Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Title.TextScaled = true
+    Title.TextSize = 14.000
+    Title.TextWrapped = true
+    Title.TextXAlignment = Enum.TextXAlignment.Left
+
+    TitleDescription.Name = "TitleDescription"
+    TitleDescription.Parent = Notification
+    TitleDescription.AnchorPoint = Vector2.new(0.5, 0.5)
+    TitleDescription.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TitleDescription.BackgroundTransparency = 1.000
+    TitleDescription.BorderSizePixel = 0
+    TitleDescription.Position = UDim2.new(0.576161206, 0, 0.356244653, 0)
+    TitleDescription.Size = UDim2.new(0.766679108, 0, 0.134915724, 0)
+    TitleDescription.Font = Enum.Font.GothamBold
+    TitleDescription.Text = titledescription or "Disconnected"
+    TitleDescription.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TitleDescription.TextScaled = true
+    TitleDescription.TextSize = 14.000
+    TitleDescription.TextWrapped = true
+    TitleDescription.TextXAlignment = Enum.TextXAlignment.Left
+
+    Description.Name = "Description"
+    Description.Parent = Notification
+    Description.AnchorPoint = Vector2.new(0.5, 0.5)
+    Description.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Description.BackgroundTransparency = 1.000
+    Description.BorderSizePixel = 0
+    Description.Position = UDim2.new(0.496364504, 0, 0.711373925, 0)
+    Description.Size = UDim2.new(0.926272511, 0, 0.410958916, 0)
+    Description.Font = Enum.Font.GothamSemibold
+    Description.Text = text or "Unable to sync to Arcturus API server. Please check your internet connection."
+    Description.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Description.TextScaled = true
+    Description.TextSize = 12.000
+    Description.TextWrapped = true
+    Description.TextXAlignment = Enum.TextXAlignment.Left
+    Description.TextYAlignment = Enum.TextYAlignment.Top
+
+    UICorner.CornerRadius = UDim.new(0.0399999991, 0)
+    UICorner.Parent = Notification
+
+    UIAspectRatioConstraint.Parent = Notification
+    UIAspectRatioConstraint.AspectRatio = 2.671
+
+
+    spawn(pcall(function()
+        wait(duration)
+        Notif:Destroy()
+    end))
+
+end
+
+return NotifLib;
