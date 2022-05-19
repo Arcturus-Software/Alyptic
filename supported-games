@@ -1,17 +1,17 @@
 286090429,loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();,
 4924922222,loadstring(game:HttpGet("https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/R15GUI.lua"))(),
 4623386862,loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Piggy/Piggy"))(),
-8554378337, loadstring(game:HttpGet("https://raw.githubusercontent.com/vfvo/scripts/main/weaponfightsim.lua"))(),
-5490351219,loadstring(game:HttpGet('https://raw.githubusercontent.com/Vision-Software-LLC/scripts/main/clicker-madness.lua', true))(),
+8554378337,loadstring(game:HttpGet("https://raw.githubusercontent.com/vfvo/scripts/main/weaponfightsim.lua"))(),
+5490351219,loadstring(game:HttpGet('https://raw.githubusercontent.com/Vision-Software-LLC/scripts/main/clicker-madness.lua'))(),
 4058282580,loadstring(game:HttpGet('https://raw.githubusercontent.com/BennettCode/Rblx-scripts/main/BoxingSimulator'))(),
-9072679513,loadstring(game:HttpGet('https://raw.githubusercontent.com/xyba1337/Anime-Impact-Simulator-GUI/main/GUI',true))(),
+9072679513,loadstring(game:HttpGet('https://raw.githubusercontent.com/xyba1337/Anime-Impact-Simulator-GUI/main/GUI'))(),
 8571871474,loadstring(game:HttpGet('https://raw.githubusercontent.com/BennettCode/Rblx-scripts/main/GunTycoon'))(),
-8554378337, loadstring(game:HttpGet("https://raw.githubusercontent.com/vfvo/scripts/main/weaponfightsim.lua"))(),
+8554378337,loadstring(game:HttpGet("https://raw.githubusercontent.com/vfvo/scripts/main/weaponfightsim.lua"))(),
 6284583030,loadstring(game:HttpGet("https://rawscripts.net/raw/EVENT!-Pet-Simulator-X!-Paste-Pasta-2267",linest==braindead))(),
-6717419717,loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/MaxGhoulGUI'),true))(),
+6717419717,loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/MaxGhoulGUI')))(),
 5802642341,loadstring(game:HttpGet("https://raw.githubusercontent.com/bebedi15/SRM-Scripts/main/Bebedi9960/CityLife.lua"))(),
 5233782396,loadstring(game:HttpGet("https://raw.githubusercontent.com/TheWitch-BirdHub/BirdHubv0.1/main/load"))(),
-9049840490,loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Sonic%20Speed%20Simulator/main.lua", true))(),
+9049840490,loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Sonic%20Speed%20Simulator/main.lua"))(),
 5130598377,loadstring(game:HttpGet("https://raw.githubusercontent.com/muzrblx/nanocores/main/Loader/HubLoader.lua"))(),
 1962086868,loadstring(game:HttpGet('https://raw.githubusercontent.com/weiny-ez/weinz/main/weinz-tower-of-hell.lua'))(),
 6961712970,loadstring(game:HttpGet("https://raw.githubusercontent.com/MarkasLUA/Shoe-Simulator-GUI/main/Shoe%20Simulator.lua"))(),
@@ -19,43 +19,26 @@
 2788229376,loadstring(game:HttpGet('https://raw.githubusercontent.com/SpaceYes/Lua/Main/DaHood.Lua'))(),
 7555007091,loadstring(game:HttpGet('https://pastebin.com/raw/XY56d1q2'))(),
 2768379856,loadstring(game:HttpGet('https://raw.githubusercontent.com/Viserromero/Antex/master/SCP3008'))(),
-6872265039,loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))(),
-185655149,loadstring(game:HttpGet("https://controlc.com/ea069b61/fullscreen.php?hash=1b94376a8b966cc80cd4f556581bc0fe&toolbar=true&linenum=false", true))(),
+6872265039,loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua"))(),
+185655149,loadstring(game:HttpGet("https://controlc.com/ea069b61/fullscreen.php?hash=1b94376a8b966cc80cd4f556581bc0fe&toolbar=true&linenum=false"))(),
 893973440,loadstring(game:HttpGet("https://raw.githubusercontent.com/khoaScript/scripts/master/flee-the-facility.lua"))(),
 189707,loadstring(game:HttpGet('https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main'))(),
-734159876,loadstring(game:HttpGet("https://pastebin.com/raw/YYVLbzVg", true))(),
-3101667897,loadstring(game:HttpGet("https://pastebin.com/raw/RGx94MbJ", true))()
-
-901793731,loadstring(game:HttpGet("https://raw.githubusercontent.com/iQAIRHUB/Project-Ripple/main/D-DAY/V3.0.3",true))(),
-
-5970745461,loadstring(game:HttpGet("https://pastebin.com/raw/gz3JDngQ"))().
-
+734159876,loadstring(game:HttpGet("https://pastebin.com/raw/YYVLbzVg"))(),
+3101667897,loadstring(game:HttpGet("https://pastebin.com/raw/RGx94MbJ"))(),
+901793731,loadstring(game:HttpGet("https://raw.githubusercontent.com/iQAIRHUB/Project-Ripple/main/D-DAY/V3.0.3"))(),
+5970745461,loadstring(game:HttpGet("https://pastebin.com/raw/gz3JDngQ"))(),
 9292879820,loadstring(game:HttpGet("https://gist.githubusercontent.com/MheeHax/0e64bd6fcdae56c0601c01535e29d1ef/raw/0624a8c4de59ccc131523aed343d2a5f4412a194/Grass%2520Cutting%2520Incremental"))(),
-
 566399244,loadstring(game:HttpGet("loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()"))(),
-
 920587237,loadstring(game:HttpGet("https://controlc.com/ce465207/fullscreen.php?hash=17f67fe40b7f3c41a392dc26fcc42cc1&toolbar=true&linenum=false"))(),
-
-3623096087,loadstring(game:HttpGet("https://raw.githubusercontent.com/HadesRblx/src/master/HadesHub.lua", true))(),
-
+3623096087,loadstring(game:HttpGet("https://raw.githubusercontent.com/HadesRblx/src/master/HadesHub.lua"))(),
 277751860,loadstring(game:HttpGet("https://controlc.com/1ee2a2da/fullscreen.php?hash=22bc04c397dc9c10be52170e57977210&toolbar=true&linenum=false"))(),
-
 6284583030,loadstring(game:HttpGet("https://pastebin.com/raw/BdvUGb2q"))(),
-
 142823291,loadstring(game:HttpGet("https://pastebin.com/raw/H3yikcZu"))(),
-
 2569453732,loadstring(game:HttpGet("https://raw.githubusercontent.com/insanedude59/RiseOfNationsGui/main/OpenSource.lua"))();,
-
 28382335,loadstring(game:HttpGet("https://pastebin.com/raw/1W3c4Bwk"))(),
-
-1224212277,loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/811e25ec8cfcdaa9ae7026353288783c/raw/4b073a5c1a0a4e2ed7e2304c2e769eb440a371a9/h", true))(),
-
+1224212277,loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/811e25ec8cfcdaa9ae7026353288783c/raw/4b073a5c1a0a4e2ed7e2304c2e769eb440a371a9/h"))(),
 5736409216,loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/MallTycoon.lua"))(),
-
 5926001758,loadstring(game:HttpGet('https://raw.githubusercontent.com/2dgeneralspam1/lua-releases/main/scripts/block-game.lua'))(),
-
 3823781113,loadstring(game:HttpGet("https://pastebin.com/raw/JQPzcZH4"))(),
-
 7243949835,loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))(),
-
 7549229959,loadstring(game:HttpGet('https://pastebin.com/raw/UxPskmTV'))()
