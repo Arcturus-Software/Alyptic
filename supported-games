@@ -8,7 +8,6 @@
 8571871474,loadstring(game:HttpGet('https://raw.githubusercontent.com/BennettCode/Rblx-scripts/main/GunTycoon'))(),
 8554378337, loadstring(game:HttpGet("https://raw.githubusercontent.com/vfvo/scripts/main/weaponfightsim.lua"))(),
 6284583030,loadstring(game:HttpGet("https://rawscripts.net/raw/EVENT!-Pet-Simulator-X!-Paste-Pasta-2267",linest==braindead))(),
-8571871474,loadstring(game:HttpGet('https://raw.githubusercontent.com/BennettCode/Rblx-scripts/main/GunTycoon'))(),
 6717419717,loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/MaxGhoulGUI'),true))(),
 5802642341,loadstring(game:HttpGet("https://raw.githubusercontent.com/bebedi15/SRM-Scripts/main/Bebedi9960/CityLife.lua"))(),
 5233782396,loadstring(game:HttpGet("https://raw.githubusercontent.com/TheWitch-BirdHub/BirdHubv0.1/main/load"))(),
@@ -36,8 +35,6 @@
 566399244,loadstring(game:HttpGet("loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()"))(),
 
 920587237,loadstring(game:HttpGet("https://controlc.com/ce465207/fullscreen.php?hash=17f67fe40b7f3c41a392dc26fcc42cc1&toolbar=true&linenum=false"))(),
-
-6872265039,loadstring(game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()"))(),
 
 3623096087,loadstring(game:HttpGet("https://raw.githubusercontent.com/HadesRblx/src/master/HadesHub.lua", true))(),
 
