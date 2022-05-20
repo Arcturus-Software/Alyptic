@@ -43,7 +43,12 @@
 7243949835,loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))(),
 7549229959,loadstring(game:HttpGet('https://pastebin.com/raw/UxPskmTV'))(),
 2753915549,loadstring(game:HttpGet("https://raw.githubusercontent.com/xDepressionx/Free-Script/main/BloxFruit.lua"))(),
-370731277,loadstring(game:HttpGet(('https://raw.githubusercontent.com/kilav3rm/Scripts/main/MeepCity')))()
+370731277,loadstring(game:HttpGet(('https://raw.githubusercontent.com/kilav3rm/Scripts/main/MeepCity')))(),
+654732683,loadstring(game:HttpGet("https://raw.githubusercontent.com/saucekid/scripts/main/CarCrushers.lua"))(),
+537413528,loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Build%20A%20Boat%20For%20Treasure/BABFT"))(),
+4375619868,loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))(),
+166986752,loadstring(game:HttpGet(('https://pastebin.com/raw/unZBieLE'))(),
+7232779505,loadstring(game:HttpGet(('https://controlc.com/240ab407/fullscreen.php?hash=6079bcc3dea79c9e12a12d0992be6bf5&toolbar=true&linenum=false'))(),
 
 
 
