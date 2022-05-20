@@ -34,7 +34,7 @@
 277751860,loadstring(game:HttpGet("https://controlc.com/1ee2a2da/fullscreen.php?hash=22bc04c397dc9c10be52170e57977210&toolbar=true&linenum=false"))(),
 6284583030,loadstring(game:HttpGet("https://pastebin.com/raw/BdvUGb2q"))(),
 142823291,loadstring(game:HttpGet("https://pastebin.com/raw/H3yikcZu"))(),
-2569453732,loadstring(game:HttpGet("https://raw.githubusercontent.com/insanedude59/RiseOfNationsGui/main/OpenSource.lua"))();,
+2569453732,loadstring(game:HttpGet("https://raw.githubusercontent.com/insanedude59/RiseOfNationsGui/main/OpenSource.lua"))(),
 28382335,loadstring(game:HttpGet("https://pastebin.com/raw/1W3c4Bwk"))(),
 1224212277,loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/811e25ec8cfcdaa9ae7026353288783c/raw/4b073a5c1a0a4e2ed7e2304c2e769eb440a371a9/h"))(),
 5736409216,loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/MallTycoon.lua"))(),
@@ -50,6 +50,6 @@
 166986752,loadstring(game:HttpGet(('https://pastebin.com/raw/unZBieLE'))(),
 7232779505,loadstring(game:HttpGet(('https://controlc.com/240ab407/fullscreen.php?hash=6079bcc3dea79c9e12a12d0992be6bf5&toolbar=true&linenum=false'))(),
 3956818381,loadstring(game:HttpGet('https://raw.githubusercontent.com/Blackout4781/Karma-Hub/main/Ninja%20Legends'))(),
-5310443220,loadstring(game:HttpGet('https://pastebin.com/raw/vtnTgMi5'))(),
+5310443220,loadstring(game:HttpGet('https://pastebin.com/raw/vtnTgMi5'))()
 
 
