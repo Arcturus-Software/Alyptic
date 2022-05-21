@@ -1,19 +1,40 @@
 local NotifLib = {}
 
-pcall(function()
-    if getgenv().notifications then
-        print('Active notifications : '..getgenv().notificationsnotifications)
-        getgenv().notifications = getgenv().notifications + 1
-    else
-        print('No active notifications')
-        getgenv().notifications = 0
-        getgenv().notifications = getgenv().notifications + 1
+if getgenv().notifications and getgenv().notifications ~= 0 then
+else
+    getgenv().notifications = 0
+    getgenv().notificationremoved = 0
+end
+
+if getgenv().notifications >= 2 then
+
+    while wait(0.1) do
+        if getgenv().notificationremoved == 1 then
+            getgenv().notifications = getgenv().notifications + 1
+            break
+        end
     end
-end)
+else
+    getgenv().notifications = getgenv().notifications + 1
+end
 
+function NotifLib:Notification(options)
 
+    local title
+    local titledescription
+    local descriptiontext
+    local duration
+    local icon
+    local stalled
 
-function NotifLib:Notification(title,titledescription,text,duration,icon)
+    for i,v in pairs(options) do
+        if i == "Title" then title = v end
+        if i == "TitleDescription" then titledescription = v end
+        if i == "Description" then descriptiontext = v end
+        if i == "Duration" then duration = v end
+        if i == "Icon" then icon = v end
+    end    
+
     local Notif = Instance.new("ScreenGui")
     local Notification = Instance.new("Frame")
     local UIGradient = Instance.new("UIGradient")
@@ -31,17 +52,23 @@ function NotifLib:Notification(title,titledescription,text,duration,icon)
     local UICorner = Instance.new("UICorner")
     local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
 
+
+    
+    local thisdestroyed = false
+    local notifsalive = 0
+    local difference = 0
+
     Notif.Name = "Notif"
-    Notif.Parent = game.SoundService
-    Notif.Enabled = false
+    Notif.Parent = game:GetService("CoreGui")
     Notif.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     Notification.Name = "Notification"
     Notification.Parent = Notif
+    Notification.AnchorPoint = Vector2.new(0.5, 0.5)
     Notification.BackgroundColor3 = Color3.fromRGB(9, 10, 12)
     Notification.BorderColor3 = Color3.fromRGB(9, 10, 12)
     Notification.BorderSizePixel = 0
-    Notification.Position = UDim2.new(0.843152225, 0, 0.901254177, 0)
+    Notification.Position = UDim2.new(0.93, 0, 1.03, 0)
     Notification.Size = UDim2.new(0.14919664, 0, 0.0859835073, 0)
 
     UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(33, 33, 33)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(40, 40, 40))}
@@ -109,9 +136,9 @@ function NotifLib:Notification(title,titledescription,text,duration,icon)
     Description.BackgroundTransparency = 1.000
     Description.BorderSizePixel = 0
     Description.Position = UDim2.new(0.496364504, 0, 0.711373925, 0)
-    Description.Size = UDim2.new(0.926272392, 0, 0.410958916, 0)
+    Description.Size = UDim2.new(0.926272511, 0, 0.410958916, 0)
     Description.Font = Enum.Font.GothamSemibold
-    Description.Text = text or "Sample notification text."
+    Description.Text = descriptiontext or "Sample notification text"
     Description.TextColor3 = Color3.fromRGB(255, 255, 255)
     Description.TextScaled = true
     Description.TextSize = 12.000
@@ -128,15 +155,36 @@ function NotifLib:Notification(title,titledescription,text,duration,icon)
     UICorner.CornerRadius = UDim.new(0.0399999991, 0)
     UICorner.Parent = Notification
 
-    UIAspectRatioConstraint_5.Parent = Notification
-    UIAspectRatioConstraint_5.AspectRatio = 2.671
+    UIAspectRatioConstraint.Parent = Notification
+    UIAspectRatioConstraint.AspectRatio = 2.671
+
+    local function GPMH_fake_script() -- Description.LocalScript 
+        local script = Instance.new('LocalScript', Description)
+    
+        gameid = game.GameId
+    end
+    coroutine.wrap(GPMH_fake_script)()
+    local function XQSB_fake_script() -- Notification.LocalScript 
+        local script = Instance.new('LocalScript', Notification)
+    
+        SDFSDFSDF = Instance.new('UIStroke');
+        
+        SDFSDFSDF.Parent = script.Parent
+        SDFSDFSDF.Enabled=true
+        SDFSDFSDF.Transparency = 0.2
+        SDFSDFSDF.LineJoinMode = "Round"
+        SDFSDFSDF.Thickness=2
+        SDFSDFSDF.ApplyStrokeMode="Contextual"
+        SDFSDFSDF.Color = Color3.fromRGB(255, 255, 255)
+        
+    end
+    coroutine.wrap(XQSB_fake_script)()
 
 
     spawn(pcall(function()
-        wait(duration)
         local TweenService = game:GetService("TweenService")
         local TweenInformation = TweenInfo.new(
-            1, -- how long the tween takes
+            0.6, -- how long the tween takes
             Enum.EasingStyle.Cubic, -- the easing style of the tween
             Enum.EasingDirection.In, -- the easing direction of the tween
             0, -- amount of times the tween will repeat (-1 goes infinitely)
@@ -151,9 +199,104 @@ function NotifLib:Notification(title,titledescription,text,duration,icon)
                 BackgroundTransparency = 1
             }
         ) -- TweenService:Create() returns a Tween animation
+
+        local Tween2 = TweenService:Create(
+            Icon, -- the instance I want to animate
+            TweenInformation, -- the TweenInfo instance I want to describe my animation
+            { -- a dictionary of the Frame properties that will be animated
+                ImageTransparency = 1
+            }
+        ) -- TweenService:Create() returns a Tween animation
+
+        local Tween3 = TweenService:Create(
+            Title, -- the instance I want to animate
+            TweenInformation, -- the TweenInfo instance I want to describe my animation
+            { -- a dictionary of the Frame properties that will be animated
+                TextTransparency = 1
+            }
+        ) -- TweenService:Create() returns a Tween animation
+
+        local Tween4 = TweenService:Create(
+            TitleDescription, -- the instance I want to animate
+            TweenInformation, -- the TweenInfo instance I want to describe my animation
+            { -- a dictionary of the Frame properties that will be animated
+                TextTransparency = 1
+            }
+        ) -- TweenService:Create() returns a Tween animation
+
+        local Tween5 = TweenService:Create(
+            Description, -- the instance I want to animate
+            TweenInformation, -- the TweenInfo instance I want to describe my animation
+            { -- a dictionary of the Frame properties that will be animated
+                TextTransparency = 1
+            }
+        ) -- TweenService:Create() returns a Tween animation
+
+        local function ResponsiveTween(active)
+            local TweenInformation = TweenInfo.new(
+                0.5, -- how long the tween takes
+                Enum.EasingStyle.Cubic, -- the easing style of the tween
+                Enum.EasingDirection.In, -- the easing direction of the tween
+                0, -- amount of times the tween will repeat (-1 goes infinitely)
+                false, -- true means the tween reverses, false means it does not
+                0 -- delay time before tween begins
+            )
+
+            local Tween = TweenService:Create(
+                Notification, -- the instance I want to animate
+                TweenInformation, -- the TweenInfo instance I want to describe my animation
+                { -- a dictionary of the Frame properties that will  be animated
+                    Position = UDim2.new(Notification.Position.X.Scale,Notification.Position.X.Offset,Notification.Position.Y.Scale,Notification.Position.Y.Offset - 100 * getgenv().notifications)
+                }
+            ) -- TweenService:Create() returns a Tween animation            
+
+            local TweenR = TweenService:Create(
+                Notification, -- the instance I want to animate
+                TweenInformation, -- the TweenInfo instance I want to describe my animation
+                { -- a dictionary of the Frame properties that will be animated
+                    Position = UDim2.new(Notification.Position.X.Scale,Notification.Position.X.Offset,Notification.Position.Y.Scale,Notification.Position.Y.Offset - 100)
+                }
+            ) -- TweenService:Create() returns a Tween animation
+
+            Tween:Play()
+            notifsalive = getgenv().notifications
+
+            spawn(function()
+                while not thisdestroyed do
+                    wait(0.1)
+                    difference = notifsalive - getgenv().notifications
+
+                    if getgenv().notificationremoved > 0 then
+                        TweenR:Play()
+                        wait(0.1)
+                        getgenv().notificationremoved = getgenv().notificationremoved - 1
+                    end
+
+                    for i=1,difference do
+                        difference = difference - difference
+                        TweenR:Play()
+                    end
+
+                end
+            end)
+
+        end
+        
+        
+        
+        ResponsiveTween(getgenv().notifications)    
+        wait(duration)
+        Tween:Play()
+        Tween2:Play()
+        Tween3:Play()
+        Tween4:Play()
+        Tween5:Play()
+        wait(0.6)
+
         Notif:Destroy()
+        getgenv().notifications = getgenv().notifications - 1
+        getgenv().notificationremoved = getgenv().notificationremoved + 1
+        thisdestroyed = true        
     end))
-
 end
-
 return NotifLib;
