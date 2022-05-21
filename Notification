@@ -1,312 +1,334 @@
+local lib = {}
 
-local NotifLib = {}
 
-if getgenv().notifications and getgenv().notifications ~= 0 then
-else
-    getgenv().notifications = 0
-    getgenv().notificationremoved = 0
-end
+    function lib:sendnotif(options)
 
-if getgenv().notifications >= 2 then
 
-    while wait(0.1) do
-        if getgenv().notificationremoved == 1 then
-            getgenv().notifications = getgenv().notifications + 1
-            break
+        local titlenot
+        local titdescriptionnot
+        local descriptionnot
+        local durationnot
+        local iconnot
+
+        for i,v in pairs(options) do
+            if i == "Title" then titlenot = v end
+            if i == "TitleDescription" then titdescriptionnot = v end
+            if i == "Description" then descriptionnot = v end
+            if i == "Duration" then durationnot = v end
+            if i == "Icon" then iconnot = v end
+        end    
+
+
+        local NotifLib = {}
+
+        if getgenv().notifications and getgenv().notifications ~= 0 then
+        else
+            getgenv().notifications = 0
+            getgenv().notificationremoved = 0
         end
-    end
-else
-    getgenv().notifications = getgenv().notifications + 1
-end
 
-function NotifLib:Notification(options)
+        if getgenv().notifications >= 2 then
 
-    local title
-    local titledescription
-    local descriptiontext
-    local duration
-    local icon
-    local stalled
+            while wait(0.1) do
+                if getgenv().notificationremoved == 1 then
+                    getgenv().notifications = getgenv().notifications + 1
+                    break
+                end
+            end
+        else
+            getgenv().notifications = getgenv().notifications + 1
+        end
 
-    for i,v in pairs(options) do
-        if i == "Title" then title = v end
-        if i == "TitleDescription" then titledescription = v end
-        if i == "Description" then descriptiontext = v end
-        if i == "Duration" then duration = v end
-        if i == "Icon" then icon = v end
-    end    
+        function NotifLib:Notification(options)
 
-    local Notif = Instance.new("ScreenGui")
-    local Notification = Instance.new("Frame")
-    local UIGradient = Instance.new("UIGradient")
-    local Icon = Instance.new("ImageLabel")
-    local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-    local Title = Instance.new("TextLabel")
-    local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-    local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
-    local TitleDescription = Instance.new("TextLabel")
-    local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
-    local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
-    local Description = Instance.new("TextLabel")
-    local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
-    local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
-    local UICorner = Instance.new("UICorner")
-    local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+            local title
+            local titledescription
+            local descriptiontext
+            local duration
+            local icon
+            local stalled
 
+            for i,v in pairs(options) do
+                if i == "Title" then title = v end
+                if i == "TitleDescription" then titledescription = v end
+                if i == "Description" then descriptiontext = v end
+                if i == "Duration" then duration = v end
+                if i == "Icon" then icon = v end
+            end    
 
-    
-    local thisdestroyed = false
-    local notifsalive = 0
-    local difference = 0
-
-    Notif.Name = "Notif"
-    Notif.Parent = game:GetService("CoreGui")
-    Notif.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-    Notification.Name = "Notification"
-    Notification.Parent = Notif
-    Notification.AnchorPoint = Vector2.new(0.5, 0.5)
-    Notification.BackgroundColor3 = Color3.fromRGB(9, 10, 12)
-    Notification.BorderColor3 = Color3.fromRGB(9, 10, 12)
-    Notification.BorderSizePixel = 0
-    Notification.Position = UDim2.new(0.93, 0, 1.03, 0)
-    Notification.Size = UDim2.new(0.14919664, 0, 0.0859835073, 0)
-
-    UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(33, 33, 33)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(40, 40, 40))}
-    UIGradient.Parent = Notification
-
-    Icon.Name = "Icon"
-    Icon.Parent = Notification
-    Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Icon.BackgroundTransparency = 1.000
-    Icon.Position = UDim2.new(0.0354289524, 0, 0.0949355885, 0)
-    Icon.Size = UDim2.new(0.123076931, 0, 0.328767121, 0)
-    Icon.Image = "rbxassetid://"..icon or "rbxassetid://9657561830"
-    Icon.ScaleType = Enum.ScaleType.Fit
-
-    UIAspectRatioConstraint.Parent = Icon
-
-    Title.Name = "Title"
-    Title.Parent = Notification
-    Title.AnchorPoint = Vector2.new(0.5, 0.5)
-    Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Title.BackgroundTransparency = 1.000
-    Title.BorderSizePixel = 0
-    Title.Position = UDim2.new(0.576161206, 0, 0.191861093, 0)
-    Title.Size = UDim2.new(0.766679108, 0, 0.193851367, 0)
-    Title.Font = Enum.Font.GothamBlack
-    Title.Text = title or "Arcturus"
-    Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Title.TextScaled = true
-    Title.TextSize = 14.000
-    Title.TextWrapped = true
-    Title.TextXAlignment = Enum.TextXAlignment.Left
-
-    UITextSizeConstraint.Parent = Title
-    UITextSizeConstraint.MaxTextSize = 14
-
-    UIAspectRatioConstraint_2.Parent = Title
-    UIAspectRatioConstraint_2.AspectRatio = 10.565
-
-    TitleDescription.Name = "TitleDescription"
-    TitleDescription.Parent = Notification
-    TitleDescription.AnchorPoint = Vector2.new(0.5, 0.5)
-    TitleDescription.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    TitleDescription.BackgroundTransparency = 1.000
-    TitleDescription.BorderSizePixel = 0
-    TitleDescription.Position = UDim2.new(0.576161206, 0, 0.356244653, 0)
-    TitleDescription.Size = UDim2.new(0.766679108, 0, 0.134915724, 0)
-    TitleDescription.Font = Enum.Font.GothamBold
-    TitleDescription.Text = titledescription or "Title Description"
-    TitleDescription.TextColor3 = Color3.fromRGB(255, 255, 255)
-    TitleDescription.TextScaled = true
-    TitleDescription.TextSize = 14.000
-    TitleDescription.TextWrapped = true
-    TitleDescription.TextXAlignment = Enum.TextXAlignment.Left
-
-    UITextSizeConstraint_2.Parent = TitleDescription
-    UITextSizeConstraint_2.MaxTextSize = 9
-
-    UIAspectRatioConstraint_3.Parent = TitleDescription
-    UIAspectRatioConstraint_3.AspectRatio = 15.180
-
-    Description.Name = "Description"
-    Description.Parent = Notification
-    Description.AnchorPoint = Vector2.new(0.5, 0.5)
-    Description.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Description.BackgroundTransparency = 1.000
-    Description.BorderSizePixel = 0
-    Description.Position = UDim2.new(0.496364504, 0, 0.711373925, 0)
-    Description.Size = UDim2.new(0.926272511, 0, 0.410958916, 0)
-    Description.Font = Enum.Font.GothamSemibold
-    Description.Text = descriptiontext or "Sample notification text"
-    Description.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Description.TextScaled = true
-    Description.TextSize = 12.000
-    Description.TextWrapped = true
-    Description.TextXAlignment = Enum.TextXAlignment.Left
-    Description.TextYAlignment = Enum.TextYAlignment.Top
-
-    UITextSizeConstraint_3.Parent = Description
-    UITextSizeConstraint_3.MaxTextSize = 30
-
-    UIAspectRatioConstraint_4.Parent = Description
-    UIAspectRatioConstraint_4.AspectRatio = 6.021
-
-    UICorner.CornerRadius = UDim.new(0.0399999991, 0)
-    UICorner.Parent = Notification
-
-    UIAspectRatioConstraint.Parent = Notification
-    UIAspectRatioConstraint.AspectRatio = 2.671
-
-    local function GPMH_fake_script() -- Description.LocalScript 
-        local script = Instance.new('LocalScript', Description)
-    
-        gameid = game.GameId
-    end
-    coroutine.wrap(GPMH_fake_script)()
-    local function XQSB_fake_script() -- Notification.LocalScript 
-        local script = Instance.new('LocalScript', Notification)
-    
-        SDFSDFSDF = Instance.new('UIStroke');
-        
-        SDFSDFSDF.Parent = script.Parent
-        SDFSDFSDF.Enabled=true
-        SDFSDFSDF.Transparency = 0.2
-        SDFSDFSDF.LineJoinMode = "Round"
-        SDFSDFSDF.Thickness=2
-        SDFSDFSDF.ApplyStrokeMode="Contextual"
-        SDFSDFSDF.Color = Color3.fromRGB(255, 255, 255)
-        
-    end
-    coroutine.wrap(XQSB_fake_script)()
+            local Notif = Instance.new("ScreenGui")
+            local Notification = Instance.new("Frame")
+            local UIGradient = Instance.new("UIGradient")
+            local Icon = Instance.new("ImageLabel")
+            local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+            local Title = Instance.new("TextLabel")
+            local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+            local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+            local TitleDescription = Instance.new("TextLabel")
+            local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+            local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+            local Description = Instance.new("TextLabel")
+            local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+            local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+            local UICorner = Instance.new("UICorner")
+            local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
 
 
-    spawn(pcall(function()
-        local TweenService = game:GetService("TweenService")
-        local TweenInformation = TweenInfo.new(
-            0.6, -- how long the tween takes
-            Enum.EasingStyle.Cubic, -- the easing style of the tween
-            Enum.EasingDirection.In, -- the easing direction of the tween
-            0, -- amount of times the tween will repeat (-1 goes infinitely)
-            false, -- true means the tween reverses, false means it does not
-            0 -- delay time before tween begins
-        )
+            
+            local thisdestroyed = false
+            local notifsalive = 0
+            local difference = 0
 
-        local Tween = TweenService:Create(
-            Notification, -- the instance I want to animate
-            TweenInformation, -- the TweenInfo instance I want to describe my animation
-            { -- a dictionary of the Frame properties that will be animated
-                BackgroundTransparency = 1
-            }
-        ) -- TweenService:Create() returns a Tween animation
+            Notif.Name = "Notif"
+            Notif.Parent = game:GetService("CoreGui")
+            Notif.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-        local Tween2 = TweenService:Create(
-            Icon, -- the instance I want to animate
-            TweenInformation, -- the TweenInfo instance I want to describe my animation
-            { -- a dictionary of the Frame properties that will be animated
-                ImageTransparency = 1
-            }
-        ) -- TweenService:Create() returns a Tween animation
+            Notification.Name = "Notification"
+            Notification.Parent = Notif
+            Notification.AnchorPoint = Vector2.new(0.5, 0.5)
+            Notification.BackgroundColor3 = Color3.fromRGB(9, 10, 12)
+            Notification.BorderColor3 = Color3.fromRGB(9, 10, 12)
+            Notification.BorderSizePixel = 0
+            Notification.Position = UDim2.new(0.93, 0, 1.03, 0)
+            Notification.Size = UDim2.new(0.14919664, 0, 0.0859835073, 0)
 
-        local Tween3 = TweenService:Create(
-            Title, -- the instance I want to animate
-            TweenInformation, -- the TweenInfo instance I want to describe my animation
-            { -- a dictionary of the Frame properties that will be animated
-                TextTransparency = 1
-            }
-        ) -- TweenService:Create() returns a Tween animation
+            UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(33, 33, 33)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(40, 40, 40))}
+            UIGradient.Parent = Notification
 
-        local Tween4 = TweenService:Create(
-            TitleDescription, -- the instance I want to animate
-            TweenInformation, -- the TweenInfo instance I want to describe my animation
-            { -- a dictionary of the Frame properties that will be animated
-                TextTransparency = 1
-            }
-        ) -- TweenService:Create() returns a Tween animation
+            Icon.Name = "Icon"
+            Icon.Parent = Notification
+            Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Icon.BackgroundTransparency = 1.000
+            Icon.Position = UDim2.new(0.0354289524, 0, 0.0949355885, 0)
+            Icon.Size = UDim2.new(0.123076931, 0, 0.328767121, 0)
+            Icon.Image = "rbxassetid://"..icon or "rbxassetid://9657561830"
+            Icon.ScaleType = Enum.ScaleType.Fit
 
-        local Tween5 = TweenService:Create(
-            Description, -- the instance I want to animate
-            TweenInformation, -- the TweenInfo instance I want to describe my animation
-            { -- a dictionary of the Frame properties that will be animated
-                TextTransparency = 1
-            }
-        ) -- TweenService:Create() returns a Tween animation
+            UIAspectRatioConstraint.Parent = Icon
 
-        local function ResponsiveTween(active)
-            local TweenInformation = TweenInfo.new(
-                0.5, -- how long the tween takes
-                Enum.EasingStyle.Cubic, -- the easing style of the tween
-                Enum.EasingDirection.In, -- the easing direction of the tween
-                0, -- amount of times the tween will repeat (-1 goes infinitely)
-                false, -- true means the tween reverses, false means it does not
-                0 -- delay time before tween begins
-            )
+            Title.Name = "Title"
+            Title.Parent = Notification
+            Title.AnchorPoint = Vector2.new(0.5, 0.5)
+            Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Title.BackgroundTransparency = 1.000
+            Title.BorderSizePixel = 0
+            Title.Position = UDim2.new(0.576161206, 0, 0.191861093, 0)
+            Title.Size = UDim2.new(0.766679108, 0, 0.193851367, 0)
+            Title.Font = Enum.Font.GothamBlack
+            Title.Text = title or "Arcturus"
+            Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Title.TextScaled = true
+            Title.TextSize = 14.000
+            Title.TextWrapped = true
+            Title.TextXAlignment = Enum.TextXAlignment.Left
 
-            local Tween = TweenService:Create(
-                Notification, -- the instance I want to animate
-                TweenInformation, -- the TweenInfo instance I want to describe my animation
-                { -- a dictionary of the Frame properties that will  be animated
-                    Position = UDim2.new(Notification.Position.X.Scale,Notification.Position.X.Offset,Notification.Position.Y.Scale,Notification.Position.Y.Offset - 100 * getgenv().notifications)
-                }
-            ) -- TweenService:Create() returns a Tween animation            
+            UITextSizeConstraint.Parent = Title
+            UITextSizeConstraint.MaxTextSize = 14
 
-            local TweenR = TweenService:Create(
-                Notification, -- the instance I want to animate
-                TweenInformation, -- the TweenInfo instance I want to describe my animation
-                { -- a dictionary of the Frame properties that will be animated
-                    Position = UDim2.new(Notification.Position.X.Scale,Notification.Position.X.Offset,Notification.Position.Y.Scale,Notification.Position.Y.Offset - 100)
-                }
-            ) -- TweenService:Create() returns a Tween animation
+            UIAspectRatioConstraint_2.Parent = Title
+            UIAspectRatioConstraint_2.AspectRatio = 10.565
 
-            Tween:Play()
-            notifsalive = getgenv().notifications
+            TitleDescription.Name = "TitleDescription"
+            TitleDescription.Parent = Notification
+            TitleDescription.AnchorPoint = Vector2.new(0.5, 0.5)
+            TitleDescription.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            TitleDescription.BackgroundTransparency = 1.000
+            TitleDescription.BorderSizePixel = 0
+            TitleDescription.Position = UDim2.new(0.576161206, 0, 0.356244653, 0)
+            TitleDescription.Size = UDim2.new(0.766679108, 0, 0.134915724, 0)
+            TitleDescription.Font = Enum.Font.GothamBold
+            TitleDescription.Text = titledescription or "Title Description"
+            TitleDescription.TextColor3 = Color3.fromRGB(255, 255, 255)
+            TitleDescription.TextScaled = true
+            TitleDescription.TextSize = 14.000
+            TitleDescription.TextWrapped = true
+            TitleDescription.TextXAlignment = Enum.TextXAlignment.Left
 
-            spawn(function()
-                while not thisdestroyed do
-                    wait(0.1)
-                    difference = notifsalive - getgenv().notifications
+            UITextSizeConstraint_2.Parent = TitleDescription
+            UITextSizeConstraint_2.MaxTextSize = 9
 
-                    if getgenv().notificationremoved > 0 then
-                        TweenR:Play()
-                        wait(0.1)
-                        getgenv().notificationremoved = getgenv().notificationremoved - 1
-                    end
+            UIAspectRatioConstraint_3.Parent = TitleDescription
+            UIAspectRatioConstraint_3.AspectRatio = 15.180
 
-                    for i=1,difference do
-                        difference = difference - difference
-                        TweenR:Play()
-                    end
+            Description.Name = "Description"
+            Description.Parent = Notification
+            Description.AnchorPoint = Vector2.new(0.5, 0.5)
+            Description.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Description.BackgroundTransparency = 1.000
+            Description.BorderSizePixel = 0
+            Description.Position = UDim2.new(0.496364504, 0, 0.711373925, 0)
+            Description.Size = UDim2.new(0.926272511, 0, 0.410958916, 0)
+            Description.Font = Enum.Font.GothamSemibold
+            Description.Text = descriptiontext or "Sample notification text"
+            Description.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Description.TextScaled = true
+            Description.TextSize = 12.000
+            Description.TextWrapped = true
+            Description.TextXAlignment = Enum.TextXAlignment.Left
+            Description.TextYAlignment = Enum.TextYAlignment.Top
+
+            UITextSizeConstraint_3.Parent = Description
+            UITextSizeConstraint_3.MaxTextSize = 30
+
+            UIAspectRatioConstraint_4.Parent = Description
+            UIAspectRatioConstraint_4.AspectRatio = 6.021
+
+            UICorner.CornerRadius = UDim.new(0.0399999991, 0)
+            UICorner.Parent = Notification
+
+            UIAspectRatioConstraint.Parent = Notification
+            UIAspectRatioConstraint.AspectRatio = 2.671
+
+            local function GPMH_fake_script() -- Description.LocalScript 
+                local script = Instance.new('LocalScript', Description)
+            
+                gameid = game.GameId
+            end
+            coroutine.wrap(GPMH_fake_script)()
+            local function XQSB_fake_script() -- Notification.LocalScript 
+                local script = Instance.new('LocalScript', Notification)
+            
+                SDFSDFSDF = Instance.new('UIStroke');
+                
+                SDFSDFSDF.Parent = script.Parent
+                SDFSDFSDF.Enabled=true
+                SDFSDFSDF.Transparency = 0.2
+                SDFSDFSDF.LineJoinMode = "Round"
+                SDFSDFSDF.Thickness=2
+                SDFSDFSDF.ApplyStrokeMode="Contextual"
+                SDFSDFSDF.Color = Color3.fromRGB(255, 255, 255)
+                
+            end
+            coroutine.wrap(XQSB_fake_script)()
+
+
+            spawn(pcall(function()
+                local TweenService = game:GetService("TweenService")
+                local TweenInformation = TweenInfo.new(
+                    0.6, -- how long the tween takes
+                    Enum.EasingStyle.Cubic, -- the easing style of the tween
+                    Enum.EasingDirection.In, -- the easing direction of the tween
+                    0, -- amount of times the tween will repeat (-1 goes infinitely)
+                    false, -- true means the tween reverses, false means it does not
+                    0 -- delay time before tween begins
+                )
+
+                local Tween = TweenService:Create(
+                    Notification, -- the instance I want to animate
+                    TweenInformation, -- the TweenInfo instance I want to describe my animation
+                    { -- a dictionary of the Frame properties that will be animated
+                        BackgroundTransparency = 1
+                    }
+                ) -- TweenService:Create() returns a Tween animation
+
+                local Tween2 = TweenService:Create(
+                    Icon, -- the instance I want to animate
+                    TweenInformation, -- the TweenInfo instance I want to describe my animation
+                    { -- a dictionary of the Frame properties that will be animated
+                        ImageTransparency = 1
+                    }
+                ) -- TweenService:Create() returns a Tween animation
+
+                local Tween3 = TweenService:Create(
+                    Title, -- the instance I want to animate
+                    TweenInformation, -- the TweenInfo instance I want to describe my animation
+                    { -- a dictionary of the Frame properties that will be animated
+                        TextTransparency = 1
+                    }
+                ) -- TweenService:Create() returns a Tween animation
+
+                local Tween4 = TweenService:Create(
+                    TitleDescription, -- the instance I want to animate
+                    TweenInformation, -- the TweenInfo instance I want to describe my animation
+                    { -- a dictionary of the Frame properties that will be animated
+                        TextTransparency = 1
+                    }
+                ) -- TweenService:Create() returns a Tween animation
+
+                local Tween5 = TweenService:Create(
+                    Description, -- the instance I want to animate
+                    TweenInformation, -- the TweenInfo instance I want to describe my animation
+                    { -- a dictionary of the Frame properties that will be animated
+                        TextTransparency = 1
+                    }
+                ) -- TweenService:Create() returns a Tween animation
+
+                local function ResponsiveTween(active)
+                    local TweenInformation = TweenInfo.new(
+                        0.5, -- how long the tween takes
+                        Enum.EasingStyle.Cubic, -- the easing style of the tween
+                        Enum.EasingDirection.In, -- the easing direction of the tween
+                        0, -- amount of times the tween will repeat (-1 goes infinitely)
+                        false, -- true means the tween reverses, false means it does not
+                        0 -- delay time before tween begins
+                    )
+
+                    local Tween = TweenService:Create(
+                        Notification, -- the instance I want to animate
+                        TweenInformation, -- the TweenInfo instance I want to describe my animation
+                        { -- a dictionary of the Frame properties that will  be animated
+                            Position = UDim2.new(Notification.Position.X.Scale,Notification.Position.X.Offset,Notification.Position.Y.Scale,Notification.Position.Y.Offset - 100 * getgenv().notifications)
+                        }
+                    ) -- TweenService:Create() returns a Tween animation            
+
+                    local TweenR = TweenService:Create(
+                        Notification, -- the instance I want to animate
+                        TweenInformation, -- the TweenInfo instance I want to describe my animation
+                        { -- a dictionary of the Frame properties that will be animated
+                            Position = UDim2.new(Notification.Position.X.Scale,Notification.Position.X.Offset,Notification.Position.Y.Scale,Notification.Position.Y.Offset - 100)
+                        }
+                    ) -- TweenService:Create() returns a Tween animation
+
+                    Tween:Play()
+                    notifsalive = getgenv().notifications
+
+                    spawn(function()
+                        while not thisdestroyed do
+                            wait(0.1)
+                            difference = notifsalive - getgenv().notifications
+
+                            if getgenv().notificationremoved > 0 then
+                                TweenR:Play()
+                                wait(0.1)
+                                getgenv().notificationremoved = getgenv().notificationremoved - 1
+                            end
+
+                            for i=1,difference do
+                                difference = difference - difference
+                                TweenR:Play()
+                            end
+
+                        end
+                    end)
 
                 end
-            end)
+                
+                
+                
+                ResponsiveTween(getgenv().notifications)    
+                wait(duration)
+                Tween:Play()
+                Tween2:Play()
+                Tween3:Play()
+                Tween4:Play()
+                Tween5:Play()
+                wait(0.6)
 
+                Notif:Destroy()
+                getgenv().notifications = getgenv().notifications - 1
+                getgenv().notificationremoved = getgenv().notificationremoved + 1
+                thisdestroyed = true
+            end))
         end
-        
-        
-        
-        ResponsiveTween(getgenv().notifications)    
-        wait(duration)
-        Tween:Play()
-        Tween2:Play()
-        Tween3:Play()
-        Tween4:Play()
-        Tween5:Play()
-        wait(0.6)
 
-        Notif:Destroy()
-        getgenv().notifications = getgenv().notifications - 1
-        getgenv().notificationremoved = getgenv().notificationremoved + 1
-        thisdestroyed = true
-    end))
+        NotifLib:Notification({
+            Title=titlenot,
+            TitleDescription=titdescriptionnot,
+            Description=descriptionnot,
+            Duration=durationnot,
+            Icon=iconnot
+        })
+
+    return NotifLib;
 end
-
-NotifLib:Notification({
-    Title="Disconnected",
-    TitleDescription="Alyptic Disconnected",
-    Description="Your client has been disconnected from Alyptic services.",
-    Duration=8,
-    Icon="9657561830"
-})
-
-return NotifLib;
+return lib;
