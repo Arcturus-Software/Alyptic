@@ -1,0 +1,221 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local AdminBail = Instance.new("ScreenGui")
+local AdminBail_2 = Instance.new("Frame")
+local Icon = Instance.new("ImageLabel")
+local Warning = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local Detected = Instance.new("TextLabel")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local Recommend = Instance.new("TextLabel")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local Time = Instance.new("TextLabel")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+AdminBail.Name = "AdminBail"
+AdminBail.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+AdminBail.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+AdminBail_2.Name = "AdminBail"
+AdminBail_2.Parent = AdminBail
+AdminBail_2.BackgroundColor3 = Color3.fromRGB(9, 10, 12)
+AdminBail_2.BorderSizePixel = 0
+AdminBail_2.Position = UDim2.new(0.343926549, 0, 0.342756182, 0)
+AdminBail_2.Size = UDim2.new(0.292844504, 0, 0.314487636, 0)
+AdminBail_2.Visible = false
+
+Icon.Name = "Icon"
+Icon.Parent = AdminBail_2
+Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon.BackgroundTransparency = 1.000
+Icon.Position = UDim2.new(0.199095041, 0, 0.0486891344, 0)
+Icon.Size = UDim2.new(0.122171946, 0, 0.202247187, 0)
+Icon.Image = "rbxassetid://9801262333"
+
+Warning.Name = "Warning"
+Warning.Parent = AdminBail_2
+Warning.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Warning.BackgroundTransparency = 1.000
+Warning.Position = UDim2.new(0.346153855, 0, 0.0561797768, 0)
+Warning.Size = UDim2.new(0.452488691, 0, 0.187265918, 0)
+Warning.Font = Enum.Font.GothamBlack
+Warning.Text = "WARNING"
+Warning.TextColor3 = Color3.fromRGB(255, 255, 255)
+Warning.TextScaled = true
+Warning.TextSize = 14.000
+Warning.TextWrapped = true
+Warning.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint.Parent = Warning
+UITextSizeConstraint.MaxTextSize = 42
+
+Detected.Name = "Detected"
+Detected.Parent = AdminBail_2
+Detected.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Detected.BackgroundTransparency = 1.000
+Detected.Position = UDim2.new(0.100843199, 0, 0.280898869, 0)
+Detected.Size = UDim2.new(0.79411763, 0, 0.374531835, 0)
+Detected.Font = Enum.Font.GothamMedium
+Detected.Text = "Alyptic has detected an admin in your server. Please press F1 to bail out of the server. You are at risk of being banned by a game admin, moderator, or supervisor. Arcturus Software is not responsible for any punishment or ban received in any game."
+Detected.TextColor3 = Color3.fromRGB(255, 255, 255)
+Detected.TextScaled = true
+Detected.TextSize = 14.000
+Detected.TextWrapped = true
+Detected.TextXAlignment = Enum.TextXAlignment.Left
+Detected.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_2.Parent = Detected
+UITextSizeConstraint_2.MaxTextSize = 14
+
+Recommend.Name = "Recommend"
+Recommend.Parent = AdminBail_2
+Recommend.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Recommend.BackgroundTransparency = 1.000
+Recommend.Position = UDim2.new(0.173241392, 0, 0.891385794, 0)
+Recommend.Size = UDim2.new(0.588235319, 0, 0.0674157292, 0)
+Recommend.Font = Enum.Font.GothamBlack
+Recommend.Text = "We strongly recommend you don't continue."
+Recommend.TextColor3 = Color3.fromRGB(255, 255, 255)
+Recommend.TextScaled = true
+Recommend.TextSize = 14.000
+Recommend.TextWrapped = true
+Recommend.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_3.Parent = Recommend
+UITextSizeConstraint_3.MaxTextSize = 12
+
+Time.Name = "Time"
+Time.Parent = AdminBail_2
+Time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Time.BackgroundTransparency = 1.000
+Time.Position = UDim2.new(0.775051296, 0, 0.891385794, 0)
+Time.Size = UDim2.new(0.0475113131, 0, 0.0674157292, 0)
+Time.Font = Enum.Font.GothamBlack
+Time.Text = "10"
+Time.TextColor3 = Color3.fromRGB(255, 255, 255)
+Time.TextScaled = true
+Time.TextSize = 14.000
+Time.TextWrapped = true
+Time.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_4.Parent = Time
+UITextSizeConstraint_4.MaxTextSize = 18
+
+UIAspectRatioConstraint.Parent = AdminBail_2
+UIAspectRatioConstraint.AspectRatio = 1.655
+
+-- Scripts:
+
+local function GVCA_fake_script() -- AdminBail_2.LocalScript 
+	local script = Instance.new('LocalScript', AdminBail_2)
+
+	local whitelistTable = {}
+	local whitelisted = false
+	local plr = game:GetService("Players").LocalPlayer
+	local plrId = plr.UserId
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	local Whitelist = syn.request({
+	    Url = "https://working-bot-arcturus.veloxdev.repl.co/static/adminlist.txt",
+	    Method = "GET"
+	})
+	
+	
+	local main = script.Parent
+	
+	
+	
+	splitWhitelist = string.split(Whitelist.Body, ',')
+	for i,v in pairs(splitWhitelist) do
+	    table.insert(whitelistTable,v)
+	end
+	
+	local det = true
+	
+	while task.wait(1) and det==true do
+	
+	local function search()
+	    for i,v in pairs(whitelistTable) do
+	        local id = tonumber(v)
+	        
+	        local function match()
+	            if plrId == id then
+	                return true
+	            end
+	        end
+	        
+	        if match() then
+	            return true
+	        end
+	    end
+	end
+	if search() then
+		det=false
+	    whitelisted = true
+		main.Visible=true
+		script.bail.Disabled=false
+		task.wait(1)
+		main.Time.Text="9"
+		task.wait(1)
+		main.Time.Text="8"
+		task.wait(1)
+		main.Time.Text="7"
+		task.wait(1)
+		main.Time.Text="6"
+		task.wait(1)
+		main.Time.Text="5"
+		task.wait(1)
+		main.Time.Text="4"
+		task.wait(1)
+		main.Time.Text="3"
+		task.wait(1)
+		main.Time.Text="2"
+		task.wait(1)
+		main.Time.Text="1"
+		task.wait(1)
+		main.Time.Text="..."
+	
+		local ts = game:GetService("TeleportService")
+	
+	local p = game:GetService("Players").LocalPlayer
+	
+	 
+	
+	ts:Teleport(game.PlaceId, p)
+	else
+	    whitelisted = false
+	   	main:Destroy()
+	end
+	print(whitelisted)
+	
+	end
+end
+coroutine.wrap(GVCA_fake_script)()
+-- nil.bail is disabled.
+local function YSMCA_fake_script() -- AdminBail_2.53 
+	local script = Instance.new('LocalScript', AdminBail_2)
+
+	 one = Instance.new('UIStroke');
+	
+	one.Parent = script.Parent
+	one.Enabled=true
+	one.Transparency = 0
+	one.LineJoinMode = "Round"
+	one.Thickness=2
+	one.ApplyStrokeMode="Contextual"
+	one.Color = Color3.fromRGB(255, 255, 255)
+end
+coroutine.wrap(YSMCA_fake_script)()
