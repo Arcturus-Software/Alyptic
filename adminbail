@@ -114,7 +114,7 @@ UIAspectRatioConstraint.AspectRatio = 1.655
 
 -- Scripts:
 
-local function DOGLJKD_fake_script() -- AdminBail_2.LocalScript 
+local function BDXKPQO_fake_script() -- AdminBail_2.LocalScript 
 	local script = Instance.new('LocalScript', AdminBail_2)
 
 	local whitelistTable = {}
@@ -168,7 +168,28 @@ local function DOGLJKD_fake_script() -- AdminBail_2.LocalScript
 		det=false
 	    whitelisted = true
 		main.Visible=true
-		script.bail.Disabled=false
+		local Open = false
+	
+	
+	local UserInputService = game:GetService("UserInputService")
+	
+	UserInputService.InputBegan:Connect(function(KeyCode)
+		if KeyCode.KeyCode == Enum.KeyCode.F1 then
+			if Open then
+				
+				Open = false
+			else
+				Open = true
+					local ts = game:GetService("TeleportService")
+	
+	local p = game:GetService("Players").LocalPlayer
+	
+	 
+	
+	ts:Teleport(game.PlaceId, p)
+			end
+		end
+	end)
 		task.wait(1)
 		main.Time.Text="9"
 		task.wait(1)
@@ -205,9 +226,8 @@ local function DOGLJKD_fake_script() -- AdminBail_2.LocalScript
 	
 	end
 end
-coroutine.wrap(DOGLJKD_fake_script)()
--- nil.bail is disabled.
-local function ZNRQ_fake_script() -- AdminBail_2.53 
+coroutine.wrap(BDXKPQO_fake_script)()
+local function MQUHITB_fake_script() -- AdminBail_2.53 
 	local script = Instance.new('LocalScript', AdminBail_2)
 
 	 one = Instance.new('UIStroke');
@@ -220,4 +240,4 @@ local function ZNRQ_fake_script() -- AdminBail_2.53
 	one.ApplyStrokeMode="Contextual"
 	one.Color = Color3.fromRGB(255, 255, 255)
 end
-coroutine.wrap(ZNRQ_fake_script)()
+coroutine.wrap(MQUHITB_fake_script)()
