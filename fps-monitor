@@ -1,0 +1,127 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local FPS = Instance.new("ScreenGui")
+local Detected = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local Icon = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local Detected_2 = Instance.new("TextLabel")
+local Desc = Instance.new("TextLabel")
+
+--Properties:
+
+FPS.Name = "FPS"
+FPS.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+FPS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+FPS.DisplayOrder = 999999999
+FPS.ResetOnSpawn = false
+
+Detected.Name = "Detected"
+Detected.Parent = FPS
+Detected.BackgroundColor3 = Color3.fromRGB(9, 10, 12)
+Detected.Position = UDim2.new(0.382999986, 0, 0.0299999993, 0)
+Detected.Size = UDim2.new(0, 224, 0, 129)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(33, 33, 33)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(40, 40, 40))}
+UIGradient.Parent = Detected
+
+Icon.Name = "Icon"
+Icon.Parent = Detected
+Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon.BackgroundTransparency = 1.000
+Icon.Position = UDim2.new(0.171711788, 0, 0.0930232406, 0)
+Icon.Size = UDim2.new(0, 36, 0, 36)
+Icon.Image = "rbxassetid://9801262333"
+
+Title.Name = "Title"
+Title.Parent = Detected
+Title.AnchorPoint = Vector2.new(0.5, 0.5)
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.589208841, 0, 0.189922467, 0)
+Title.Size = UDim2.new(0.466284811, 0, 0.147286788, 0)
+Title.Font = Enum.Font.GothamBlack
+Title.Text = "Low-Latency"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+Title.TextYAlignment = Enum.TextYAlignment.Top
+
+Detected_2.Name = "Detected"
+Detected_2.Parent = Detected
+Detected_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Detected_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Detected_2.BackgroundTransparency = 1.000
+Detected_2.BorderSizePixel = 0
+Detected_2.Position = UDim2.new(0.589208841, 0, 0.290697694, 0)
+Detected_2.Size = UDim2.new(0.466284811, 0, 0.100775167, 0)
+Detected_2.Font = Enum.Font.GothamBold
+Detected_2.Text = "Detected"
+Detected_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Detected_2.TextScaled = true
+Detected_2.TextSize = 14.000
+Detected_2.TextWrapped = true
+Detected_2.TextXAlignment = Enum.TextXAlignment.Left
+Detected_2.TextYAlignment = Enum.TextYAlignment.Top
+
+Desc.Name = "Desc"
+Desc.Parent = Detected
+Desc.AnchorPoint = Vector2.new(0.5, 0.5)
+Desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Desc.BackgroundTransparency = 1.000
+Desc.BorderSizePixel = 0
+Desc.Position = UDim2.new(0.49992317, 0, 0.678294599, 0)
+Desc.Size = UDim2.new(0.885927618, 0, 0.503875971, 0)
+Desc.Font = Enum.Font.GothamBold
+Desc.Text = "Alyptic will automatically lower the amount of textures in the game to save resources on your computer. This will remove some lag so that your computer wont get overwhelmed."
+Desc.TextColor3 = Color3.fromRGB(255, 255, 255)
+Desc.TextScaled = true
+Desc.TextSize = 14.000
+Desc.TextWrapped = true
+Desc.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Scripts:
+
+local function AIHIHU_fake_script() -- Detected.LocalScript 
+	local script = Instance.new('LocalScript', Detected)
+
+	
+	local frame = script.Parent -- Your frame to tween
+	local tweenService = game:GetService("TweenService")
+	frame.Visible=false
+	frame:TweenPosition(
+		frame.Position - UDim2.new(0,0,0.9,0), -- Goal (in this case moved right by 50 on X Axis)
+		"Out", -- EasingDirection
+		"Quad", -- EasingStyle
+		1 -- Time
+	)
+	
+	task.wait(5)
+	frame.Visible=true
+	frame:TweenPosition(
+		frame.Position + UDim2.new(0,0,0.9,0), -- Goal (in this case moved right by 50 on X Axis)
+		"Out", -- EasingDirection
+		"Quad", -- EasingStyle
+		1 -- Time
+	)
+	task.wait(5)
+	frame:TweenPosition(
+		frame.Position - UDim2.new(0,0,0.9,0), -- Goal (in this case moved right by 50 on X Axis)
+		"Out", -- EasingDirection
+		"Quad", -- EasingStyle
+		1 -- Time
+	)
+	tweenService:Create(frame, TweenInfo.new(0.5), {Transparency = 1}):Play()
+	
+	
+	
+	
+	
+end
+coroutine.wrap(AIHIHU_fake_script)()
