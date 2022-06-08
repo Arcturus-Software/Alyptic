@@ -51,5 +51,5 @@
 7232779505,loadstring(game:HttpGet(('https://controlc.com/240ab407/fullscreen.php?hash=6079bcc3dea79c9e12a12d0992be6bf5&toolbar=true&linenum=false'))(),
 3956818381,loadstring(game:HttpGet('https://raw.githubusercontent.com/Blackout4781/Karma-Hub/main/Ninja%20Legends'))(),
 5310443220,loadstring(game:HttpGet('https://pastebin.com/raw/vtnTgMi5'))()
-292439477,loadstring(game:HttpGet("https://raw.githubusercontent.com/VoidMasterX/strawhook/main/script.lua"))(),
+292439477,loadstring(game:HttpGet("https://raw.githubusercontent.com/VoidMasterX/strawhook/main/script.lua"))()
 
