@@ -51,5 +51,21 @@
 7232779505,loadstring(game:HttpGet(('https://controlc.com/240ab407/fullscreen.php?hash=6079bcc3dea79c9e12a12d0992be6bf5&toolbar=true&linenum=false'))(),
 3956818381,loadstring(game:HttpGet('https://raw.githubusercontent.com/Blackout4781/Karma-Hub/main/Ninja%20Legends'))(),
 5310443220,loadstring(game:HttpGet('https://pastebin.com/raw/vtnTgMi5'))(),
-292439477,loadstring(game:HttpGet("https://raw.githubusercontent.com/VoidMasterX/strawhook/main/script.lua"))()
+292439477,loadstring(game:HttpGet("https://raw.githubusercontent.com/VoidMasterX/strawhook/main/script.lua"))(),
+3095204897,loadstring(game:HttpGetAsync("https://paste.ee/r/M1Hgt/0"))(),
+13822889,loadstring(game:HttpGet("https://pastebin.com/raw/A8U2z8SX"))(),
+2317712696,loadstring(game:HttpGet("https://raw.githubusercontent.com/KeoneGithub/KeoneGithub/main/WildWestLean"))(),
+576787046,loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))(),
+2202352383,loadstring(game:HttpGet('https://pastebin.com/raw/D9btNZUr'))(),
+4468711919,loadstring(game:HttpGet("https://raw.githubusercontent.com/iQAIRHUB/Project-Ripple/main/SuperGolfGui%20V.1.06"))(),
+3440262694,loadstring(game:HttpGet("http://void-scripts.com/RIP/AirportTycoon.lua"))(),
+6951762614,loadstring(game:HttpGet("https://raw.githubusercontent.com/SlamminPig/rblxgames/main/UFO%20Simulator/UFOSimulatorGUI"))(),
+1554960397,loadstring(game:HttpGet(“https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/UniversalVehicleGUI.lua”))(),
+2830250344,loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))(),
+2569453732,loadstring(game:HttpGet('https://pastebin.com/raw/hC30LBBD'))(),
+2098516465,loadstring(game:HttpGet('https://pastebin.com/raw/bbnAcJXG'))(),
+6610021055,loadstring(game:HttpGet("https://raw.githubusercontent.com/MGCactus/myscripts/main/Noob%20Tycoon%20Army.lua"))(),
+6305942109,loadstring(game:HttpGet('https://raw.githubusercontent.com/BoaHacker/ROBLOX/main/cheat'))(),
+1345139196,loadstring(game:HttpGet('https://pastebin.com/raw/wpmtVBxW'))(),
+
 
