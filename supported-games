@@ -76,7 +76,23 @@
 4580204640,loadstring(game:HttpGet("https://raw.githubusercontent.com/MiloHaxx/ChairWare/main/loader.lua"))(),
 891852901,loadstring(game:HttpGet("https://raw.githubusercontent.com/typical-overk1ll/scripts/main/Greenville"))(),
 5171093784,loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))(),
-9551640993,loadstring(game:HttpGet('https://pastebin.com/raw/zzGDeWjC'))()
+9551640993,loadstring(game:HttpGet('https://pastebin.com/raw/zzGDeWjC'))(),
+6984315364,loadstring(game:HttpGet("https://pastebin.com/raw/eDeitFGD"))(),
+7180042682,loadstring(game:HttpGet('https://raw.githubusercontent.com/laderite/zenx/main/scripts/Military_Tycoon.lua'))(),
+9747868172,loadstring(game:HttpGet('https://raw.githubusercontent.com/DashaBars/Hack/main/Game%20Company%20Tycoon'))(),
+4616652839,loadstring(game:HttpGet("https://pastebin.com/raw/291xbENd"))(),
+1458767429,loadstring(game:HttpGet("https://raw.githubusercontent.com/travislmao/pub-scripts/main/abagui"))(),
+4657574717,loadstring(game:HttpGet("https://pastebin.com/raw/zqwyfDpN"))(),
+4872321990,loadstring(game:HttpGet("http://void-scripts.com/Scripts/islands.lua"))(),
+2823503928,loadstring(game:HttpGet("https://pastebin.com/raw/6T9i0dh1"))(),
+6843988672,loadstring(game:HttpGet("https://raw.githubusercontent.com/NocturneMoDz/County-Jail-Roleplay/main/METAB"))(),
+7075737729,loadstring(game:HttpGet("https://raw.githubusercontent.com/sinzcheats/roblox/main/hoopcentral"))(),
+413424176,loadstring(game:HttpGet("https://paste.ee/r/tPoML/0"))(),
+5534174456,loadstring(game:HttpGet("https://pastebin.com/raw/fEuM9FYX"))(),
+404729070,loadstring(game:HttpGet("https://pastebin.com/raw/Pp4UwWyQ"))(),
+1340132428,loadstring(game:HttpGet("https://pastebin.com/raw/YDhj3Fxw"))(),
+5670218884,loadstring(game:HttpGet("https://pastebin.com/raw/A2XzRn0j"))(),
+740581508,loadstring(game:HttpGet('https://raw.githubusercontent.com/gen40/EntryPointGUI/main/Entry_Point_OBFUSCATED.lua'))()
 
 
 
