@@ -6,7 +6,6 @@
 4058282580,loadstring(game:HttpGet('https://raw.githubusercontent.com/BennettCode/Rblx-scripts/main/BoxingSimulator'))(),
 9072679513,loadstring(game:HttpGet('https://raw.githubusercontent.com/xyba1337/Anime-Impact-Simulator-GUI/main/GUI'))(),
 8571871474,loadstring(game:HttpGet('https://raw.githubusercontent.com/BennettCode/Rblx-scripts/main/GunTycoon'))(),
-8554378337,loadstring(game:HttpGet("https://raw.githubusercontent.com/vfvo/scripts/main/weaponfightsim.lua"))(),
 6284583030,loadstring(game:HttpGet("https://rawscripts.net/raw/EVENT!-Pet-Simulator-X!-Paste-Pasta-2267",linest==braindead))(),
 6717419717,loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/MaxGhoulGUI')))(),
 5802642341,loadstring(game:HttpGet("https://raw.githubusercontent.com/bebedi15/SRM-Scripts/main/Bebedi9960/CityLife.lua"))(),
@@ -92,8 +91,28 @@
 404729070,loadstring(game:HttpGet("https://pastebin.com/raw/Pp4UwWyQ"))(),
 1340132428,loadstring(game:HttpGet("https://pastebin.com/raw/YDhj3Fxw"))(),
 5670218884,loadstring(game:HttpGet("https://pastebin.com/raw/A2XzRn0j"))(),
-740581508,loadstring(game:HttpGet('https://raw.githubusercontent.com/gen40/EntryPointGUI/main/Entry_Point_OBFUSCATED.lua'))()
-
+740581508,loadstring(game:HttpGet('https://raw.githubusercontent.com/gen40/EntryPointGUI/main/Entry_Point_OBFUSCATED.lua'))(),
+155615604,loadstring(game:HttpGet("https://pastebin.com/raw/VQHAa400"))(),
+6361937392,loadstring(game:HttpGet('https://raw.githubusercontent.com/Impulseonyoutube/IDKANYMORE/main/stayalive.lua'))(),
+2474168535,loadstring(game:HttpGet(("https://raw.githubusercontent.com/Drifter0507/scripts/main/westbound")))(),
+5865858426,loadstring(game:HttpGet('https://empirma.com/script/rt2.lua'))(),
+395515963,loadstring(game:HttpGet('https://github.com/zildjibian/My-Scripts/raw/main/Tix%20Factory%20Tycoon.lua'))(),
+2986677229,loadstring(game:HttpGet(('https://raw.githubusercontent.com/Pojken123/Hub/main/Hub')))(),
+7890238440,loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))(),
+7050008107,loadstring(game:HttpGet"https://pastebinp.com/raw/eccv9pgu")(),
+5388509011,loadstring(game:HttpGet"https://pastebin.com/raw/5cG87An9")(),
+3351674303,loadstring(game:HttpGet("https://raw.githubusercontent.com/KPRAAHUE/driving-empire-autofarm2/main/README.md"))(),
+648362523,loadstring(game:HttpGet('https://pastebin.com/raw/MLPypHYv'))(),
+6808416928,loadstring(game:HttpGet('https://pastebin.com/raw/QeHzU9pJ'))(),
+7074772062,loadstring(game:HttpGet('https://pastebin.com/raw/FGSii0xk'))(),
+4282985734,loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiritXmas/Project-Hook/main/required.lua"))(),
+6403373529,loadstring(game:HttpGet("https://raw.githubusercontent.com/dizyhvh/slap_battles_gui/main/0.lua"))(),
+2809202155,loadstring(game:HttpGet("https://raw.githubusercontent.com/Historia00012/HISTORIAHUB/main/Histyhubb"))(),
+5926001758,loadstring(game:HttpGet('https://raw.githubusercontent.com/2dgeneralspam1/lua-releases/main/scripts/block-game.lua'))(),
+6737970321,loadstring(game:HttpGet("https://ghostbin.co/paste/gumct/raw"))(),
+192800,loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/bb2f1182a224999682a2d1a87aa8517a/raw/66c7791224be0434b23938ca26244238649d0143/ameicaa"))(),
+4972091010,loadstring(game:HttpGet("https://raw.githubusercontent.com/toskaman/fb/master/MSDOS"))(),
+6243699076,loadstring(game:HttpGet('https://raw.githubusercontent.com/KTollT/KTollT/main/README.md'))(),
 
 
 
