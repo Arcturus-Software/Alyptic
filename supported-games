@@ -113,7 +113,25 @@
 192800,loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/bb2f1182a224999682a2d1a87aa8517a/raw/66c7791224be0434b23938ca26244238649d0143/ameicaa"))(),
 4972091010,loadstring(game:HttpGet("https://raw.githubusercontent.com/toskaman/fb/master/MSDOS"))(),
 6243699076,loadstring(game:HttpGet('https://raw.githubusercontent.com/KTollT/KTollT/main/README.md'))(),
-
+2984072291,loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/JustEzpi/ROBLOX-Scripts/main/ZombieStories"))(),
+9167501050,loadstring(game:HttpGet("https://pastebin.com/raw/nZiVGpJH"))(),
+7951464846,loadstring(game:HttpGet("https://pastebin.com/raw/bj0XH28a"))(),
+69184822,loadstring(game:HttpGet("https://pastebin.com/raw/gmqVNLc0"))(),
+3398014311,loadstring(game:HttpGet("https://pastebin.com/raw/uAZf15LR"))(),
+4616652839,loadstring(game:HttpGet("https://bruh.keshsenpai.com/.lua"))(),
+3260590327,loadstring(game:HttpGet("https://pastebin.com/raw/jeW8tu28"))(),
+8146731988,loadstring(game:HttpGet("https://pastebin.com/raw/6UwPt11f"))(),
+3421472751,loadstring(game:HttpGet("https://pastebin.com/raw/VQHAa400"))(),
+6521785648,loadstring(game:HttpGet("https://pastebin.com/raw/cUWx0dhP"))(),
+2577040780,loadstring(game:HttpGet('https://nto.darkdevs.pro/uploads/eviction.lua'))(),
+2473334918,loadstring(game:HttpGet("https://pastebin.com/raw/uMPV5Vu0"))(),
+379614936,loadstring(game:HttpGet("https://pastebin.com/raw/NENhJy7H"))(),
+2228128339,loadstring(game:HttpGet("https://raw.githubusercontent.com/Altix-dev/Shaltix-s-Hub/master/Hub.lua"))(),
+3993081667,loadstring(game:HttpGet("https://pastebin.com/raw/Sy9XEh0c"))(),
+183364845,loadstring(game:HttpGet("https://pastebin.com/raw/HKzsRtnK"))(),
+32990482,loadstring(game:HttpGet("https://pastebin.com/raw/eAeDTFNH"))(),
+2377868063,loadstring(game:HttpGet("https://pastebin.com/raw/9Wa9bFqs"))(),
+1204176775,loadstring(game:HttpGet("https://pastebin.com/raw/7MghTk6V"))()
 
 
 
